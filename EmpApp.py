@@ -135,7 +135,7 @@ def FetchData():
         dynamodb_client = boto3.client('dynamodb', region_name=customregion)
         try:
             response = dynamodb_client.get_item(
-                TableName='employee_image_table',
+                TableName= customtable ,
                 Key={
                     'empid': {
                         'N': str(emp_id)
